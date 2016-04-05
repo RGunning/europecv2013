@@ -352,6 +352,7 @@
 \newcommand*{\ecvaddress}[1]{\def\ecv@address{#1}}
 \newcommand*{\ecvtelephone}[2][]{\def\ecv@mobile{#2}\def\ecv@telephone{#1}}
 \newcommand*{\ecvemail}[2][]{\def\ecv@emailid{#2}\def\ecv@emailtext{#1}}
+\newcommand*{\ecvskype}[1][]{\def\ecv@skype{#1}}
 \newcommand*{\ecvlinkedin}[1]{\def\ecv@linkedin{#1}}
 \newcommand*{\ecvhomepage}[1]{\def\ecv@homepage{#1}}
 \newcommand*{\ecvnationality}[1]{\def\ecv@nationality{#1}}
@@ -379,6 +380,7 @@
 \ecvfootername{\ecv@name}
 \ecvaddress{}
 \ecvtelephone{}
+\ecvskype{}
 \ecvemail{}
 \ecvlinkedin{}
 \ecvhomepage{}
@@ -415,6 +417,10 @@ $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_url}\end{array}$\e
 \fi
 \ifx\@empty\ecv@linkedin\else
 $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_linkedin}\end{array}$\ecv@linkedin\par\vspace{10pt}
+\fi
+\ifx\@empty\ecv@skype\else
+	$\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_im}\end{array}$%
+    \textcolor{curious-blue}{Skype} \href{skype:\ecv@skype}{\foreignlanguage{english}{\ecv@skype}}\par\vspace{5pt}
 \fi
 \ifx\@empty\ecv@gender
 	\ifx\@empty\ecv@birth
