@@ -36,7 +36,7 @@
 % Set language
 \DeclareOption{english}{%
   \AtEndOfPackage{%
-    \InputIfFileExists{ecven.def}{}{%
+    \InputIfFileExists{translations/ecven.def}{}{%
     \ClassError{europecv2013}{English definition file 'ecven.def' not found}%
      {The file should be inside the europecv folder.\MessageBreak
     Try to re-install the europecv class.}}%
@@ -617,7 +617,7 @@ $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_skype}\end{array}$
  #6}
 }
 
-\newcommand{\ecveducation}[6][30pt]{%
+\newcommand{\ecveducation}[6][20pt]{%
  \ecvitem[#1]{#2}{\begin{Large}\textcolor{torea-bay}{#3}\end{Large}
  \hfill\small\textcolor{curious-blue}{#6}\par\vspace{3pt}
  #4{\par\vspace{3pt}}
